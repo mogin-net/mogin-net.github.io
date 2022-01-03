@@ -16,11 +16,28 @@ html(lang="en")
         a(href="#").icon.solid.fa-home: span Home
         a(href="#projects").icon.solid.fa-cube: span Projects
         a(href="#tools").icon.solid.fa-tools: span Tools
-        a(href="#news").icon.solid.fa-rss: span News
+        a(href="#about").icon.solid.fa-id-card: span About Us
+        a(href="#contact").icon.solid.fa-envelope: span Contact
 
       // Main Content 
       #main
         block content
+
+        article#credits.panel 
+          header 
+            h2 Credits
+          h5 Images
+          ul 
+            li Unsplash (#[a(href="http://unsplash.com") unsplash.com])
+            li Pixabay (#[a(href="http://pixabay.com") pixabay.com])
+          h5 Icons
+          ul 
+            li Font Awesome (#[a(href="http://fontawesome.io") fontawesome.io])
+          h5 Other 
+          ul 
+            li jQuery (#[a(href="http://jquery.com") jquery.com])
+            li Responsive Tools (#[a(href="http://github.com/ajlkn/responsive-tools") github.com/ajlkn/responsive-tools])
+            li HTML5UP Astral (#[a(href="http://html5up.net/astral") html5up.net/astral])
 
       // Footer 
       #footer
@@ -28,5 +45,5 @@ html(lang="en")
           li#copyright &copy; 2021 - #{new Date().getFullYear()}
           li Pt. Mogin Technology Terpadu
           li 
-            a(href="#impressum") Impressum
+            a(href="#credits") Credits
     include ./scripts.pug
