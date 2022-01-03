@@ -14,4 +14,4 @@ FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:0-${VARIANT}
 
 # [Optional] Uncomment if you want to install more global node packages
 # RUN su node -c "npm install -g eslint prettier npm"
-RUN su node -c "npm install -g pug-cli"
+RUN su node -c "npm install -g pug-cli sass"

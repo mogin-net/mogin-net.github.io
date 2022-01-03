@@ -1,0 +1,37 @@
+extends /layout.pug
+//- block title
+//-   - var title = "Name"
+
+block content
+  article#home.panel.intro
+    header 
+      img.logo(src="/img/logo.svg")
+      p Technology Terpadu
+    a(href="#customers").jumplink.pic
+      span.arrow.icon.solid.fa-chevron-right 
+        span Customers
+      img(src="/img/coding.jpg" alt="")
+
+  article#projects.panel
+    header 
+      h2 Projects
+    p.
+      Lorem
+    h4 Customers
+
+  article#tools.panel
+    header 
+      h2 Tools
+    h5 Programming
+    ul 
+      li Typescript, Javascript, PHP, Visual Basic, Objective-C, HTML, CSS, SASS, Shell, LaTeX
+      li Postgres, MySQL, MariaDB, MsSQL, Oracle, Redis, Memcached
+      li React, Angular
+    h5 Software
+    ul 
+      li Visual Studio Code, Docker, Kubernetes, Git, Postman
+      li Affinity Designer, Affinity Photo
+      li Excel, Powerpoint, Word, Teams 
+    h5 Hardware 
+    ul 
+      li Apple, Windows

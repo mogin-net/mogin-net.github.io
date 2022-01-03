@@ -4,8 +4,8 @@
 __metadata:
   version: 5
 
-"workspace@workspace:.":
+"mogin-web@workspace:.":
   version: 0.0.0-use.local
-  resolution: "workspace@workspace:."
+  resolution: "mogin-web@workspace:."
   languageName: unknown
   linkType: soft

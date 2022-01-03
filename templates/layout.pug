@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+  head
+    block title
+    - var headerTitle = title ? `Pt. Mogin Technology Terpadu :: ${title}` : "Pt. Mogin Technology Terpadu"
+    title #{headerTitle}
+    meta(charset="utf-8")/
+    meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")/
+    link(rel="stylesheet" href="/css/main.css")/
+    noscript: link(rel="stylesheet" href="/css/noscript.css")/
+  body.is-preload
+    // Wrapper 
+    #wrapper
+      // Navigation 
+      nav#nav
+        a(href="#").icon.solid.fa-home: span Home
+        a(href="#projects").icon.solid.fa-cube: span Projects
+        a(href="#tools").icon.solid.fa-tools: span Tools
+        a(href="#news").icon.solid.fa-rss: span News
+
+      // Main Content 
+      #main
+        block content
+
+      // Footer 
+      #footer
+        ul.copyright 
+          li#copyright &copy; 2021 - #{new Date().getFullYear()}
+          li Pt. Mogin Technology Terpadu
+          li Impressum
+    include ./scripts.pug

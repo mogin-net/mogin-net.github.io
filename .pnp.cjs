@@ -19,14 +19,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     ],
     "dependencyTreeRoots": [
       {
-        "name": "workspace",
+        "name": "mogin-web",
         "reference": "workspace:."
       }
     ],
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$)",
     "fallbackExclusionList": [
-      ["workspace", ["workspace:."]]
+      ["mogin-web", ["workspace:."]]
     ],
     "fallbackPool": [
     ],
@@ -39,11 +39,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT",
         }]
       ]],
-      ["workspace", [
+      ["mogin-web", [
         ["workspace:.", {
           "packageLocation": "./",
           "packageDependencies": [
-            ["workspace", "workspace:."]
+            ["mogin-web", "workspace:."]
           ],
           "linkType": "SOFT",
         }]
