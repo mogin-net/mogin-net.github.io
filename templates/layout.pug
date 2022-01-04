@@ -1,3 +1,5 @@
+include /navigation.pug
+
 doctype html
 html(lang="en")
   head
@@ -12,20 +14,19 @@ html(lang="en")
     // Wrapper 
     #wrapper
       // Navigation 
-      nav#nav
-        a(href="#").icon.solid.fa-home: span Home
-        a(href="#projects").icon.solid.fa-cube: span Projects
-        a(href="#tools").icon.solid.fa-tools: span Tools
-        a(href="#news").icon.solid.fa-rss: span News
+      block navigation
+        +navigate
 
       // Main Content 
       #main
         block content
+
 
       // Footer 
       #footer
         ul.copyright 
           li#copyright &copy; 2021 - #{new Date().getFullYear()}
           li Pt. Mogin Technology Terpadu
-          li Impressum
+          li 
+            a(href="/credits.html") Credits
     include ./scripts.pug
