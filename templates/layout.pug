@@ -4,7 +4,7 @@ doctype html
 html(lang="en")
   head
     block title
-    - var headerTitle = title ? `Pt. Mogin Technology Terpadu :: ${title}` : "Pt. Mogin Technology Terpadu"
+    - var headerTitle = title ? `PT. Mogin Technology Terpadu :: ${title}` : "Pt. Mogin Technology Terpadu"
     title #{headerTitle}
     meta(charset="utf-8")/
     meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")/
@@ -26,7 +26,7 @@ html(lang="en")
       #footer
         ul.copyright 
           li#copyright &copy; 2021 - #{new Date().getFullYear()}
-          li Pt. Mogin Technology Terpadu
+          li PT. Mogin Technology Terpadu
           li 
             a(href="/credits.html") Credits
     include ./scripts.pug
