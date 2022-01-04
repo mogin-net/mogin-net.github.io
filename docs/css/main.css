@@ -1669,6 +1669,7 @@ body.is-preload #wrapper {
   flex-shrink: 0;
   width: 17em;
   height: 100%;
+  border-left: 3px solid #FFB620;
 }
 #main > .panel.intro .pic:before {
   content: "";
@@ -1767,6 +1768,8 @@ body.is-preload #wrapper {
   #main > .panel.intro .pic {
     height: 25em;
     width: 100%;
+    border-top: 3px solid #FFB620;
+    border-left: 0;
   }
   #main > .panel.intro header {
     padding: 4em;

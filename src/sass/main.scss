@@ -771,6 +771,7 @@
 					@include vendor('flex-shrink', '0');
 					width: 17em;
 					height: 100%;
+          border-left: 3px solid map-get($palette, "secondary");
 
 					&:before {
 						content: '';
@@ -863,6 +864,8 @@
 					.pic {
 						height: 25em;
 						width: 100%;
+            border-top: 3px solid map-get($palette, "secondary");
+            border-left: 0;
 					}
 
 					header {

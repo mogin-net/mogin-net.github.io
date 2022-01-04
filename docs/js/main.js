@@ -58,9 +58,6 @@
 
 				var $panel, $link;
 
-        console.log(window.location);
-        console.log($nav_links);
-        console.log($panels);
 				// Get panel, link.
 					if (window.location.hash) {
 				 		$panel = $panels.filter(window.location.hash);
@@ -68,16 +65,15 @@
 
 					}
 
+          console.log($panels);
 				// No panel/link? Default to first.
 					if (!$panel
 					||	$panel.length == 0) {
             $panel = $panels.first();
           }
           if (!$link && window.location.pathname == "/") {
-						$link = $nav_links.first();
+						$link = $nav_links.length >= 2 ? $nav_links.eq(2) : $nav_links.first();
 					}
-
-          console.log($link);
 
 				// Deactivate all panels except this one.
 					$panels.not($panel)
@@ -113,7 +109,7 @@
 					else {
 
 						$panel = $panels.first();
-						$link = $nav_links.first();
+						$link = $nav_links.length >= 2 ? $nav_links.eq(2) : $nav_links.first();
 
 					}
 
