@@ -1379,7 +1379,7 @@ ul li li li li::before {
 }
 ul li::before {
   content: "■";
-  font-weight: bold;
+  font-size: 100%;
   display: inline-block;
   width: 1em;
   margin-left: -1em;
