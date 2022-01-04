@@ -1120,6 +1120,33 @@
     }
   }
 
+  #E404 {
+    text-align: center;
+    background-color: map-get($palette, "background");
+    background-image: url("/img/404.jpg");
+    height: 300px;
+    
+    header {
+      background-color: map-get($palette, "background");
+      display: inline-flex;
+      flex-direction: column;
+      gap: 15px;
+      align-content: center;
+      justify-content: center;
+      padding: 1em;
+      border-radius: 15px;
+      box-shadow: 0px 6px 6px 4px rgba(0, 0, 0, 0.25);
+
+      h1 {
+        line-height: 100%;
+        font-size: 400%;
+      }
+      div {
+        font-size: 100%;
+      }
+    }
+  }
+
   #contact {
     a {
       color: map-get($palette, "primary");
