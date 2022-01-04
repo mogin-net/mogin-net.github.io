@@ -80,7 +80,7 @@
     margin: 1em 0em;
 
     code {
-      font-family: "Roboto Mono";
+      font-family: "Roboto Mono", monospace;
     }
   }
 
@@ -163,7 +163,7 @@
 	}
 
 	body, input, textarea, select {
-		font-family: 'Roboto', sans-serif;
+		font-family: 'Roboto', Arial, sans-serif;
 		font-weight: 300;
 		color: map-get($palette, "text");
 		font-size: 20pt;
@@ -481,7 +481,7 @@
     margin-left: 0em;
 
 		li {
-			padding-left: 1em;
+			padding-left: 0.75em;
 
       li::before {
         color: map-get($palette, "accent");
@@ -501,11 +501,11 @@
 		}
 
     li::before {
-      content: "\25A0";
-      font-size: 100%;
+      content: "\25AA";
+      font-family: "Roboto", Arial, sans-serif;
       display: inline-block;
-      width: 1em;
-      margin-left: -1em;
+      width: 0.75em;
+      margin-left: -0.75em;
       color: map-get($palette, "secondary");
     }
 

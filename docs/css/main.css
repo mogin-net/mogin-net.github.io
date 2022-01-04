@@ -58,7 +58,7 @@ pre {
   margin: 1em 0em;
 }
 pre code {
-  font-family: "Roboto Mono";
+  font-family: "Roboto Mono", monospace;
 }
 
 table {
@@ -1041,7 +1041,7 @@ body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 }
 
 body, input, textarea, select {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   font-weight: 300;
   color: #000000;
   font-size: 20pt;
@@ -1366,7 +1366,7 @@ ul {
   margin-left: 0em;
 }
 ul li {
-  padding-left: 1em;
+  padding-left: 0.75em;
 }
 ul li li::before {
   color: #45709D;
@@ -1378,11 +1378,11 @@ ul li li li li::before {
   color: #894027;
 }
 ul li::before {
-  content: "■";
-  font-size: 100%;
+  content: "▪";
+  font-family: "Roboto", Arial, sans-serif;
   display: inline-block;
-  width: 1em;
-  margin-left: -1em;
+  width: 0.75em;
+  margin-left: -0.75em;
   color: #FFB620;
 }
 ul :last-of-type {
