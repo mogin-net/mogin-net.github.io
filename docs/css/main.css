@@ -1992,6 +1992,31 @@ body.is-preload #wrapper {
   content: "#FFFFFF";
 }
 
+#E404 {
+  text-align: center;
+  background-color: #FFFFFF;
+  background-image: url("/img/404.jpg");
+  height: 300px;
+}
+#E404 header {
+  background-color: #FFFFFF;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 15px;
+  align-content: center;
+  justify-content: center;
+  padding: 1em;
+  border-radius: 15px;
+  box-shadow: 0px 6px 6px 4px rgba(0, 0, 0, 0.25);
+}
+#E404 header h1 {
+  line-height: 100%;
+  font-size: 400%;
+}
+#E404 header div {
+  font-size: 100%;
+}
+
 #contact a {
   color: #00416A;
   color: rgba(0, 65, 106, 0.65);
