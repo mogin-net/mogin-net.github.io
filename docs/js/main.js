@@ -36,7 +36,6 @@
 			.on('click', function(event) {
 
 				var href = $(this).attr('href');
-
 				// Not a panel link? Bail.
 					if (href.charAt(0) != '#'
 					||	$panels.filter(href).length == 0)
@@ -59,9 +58,11 @@
 
 				var $panel, $link;
 
+        console.log(window.location);
+        console.log($nav_links);
+        console.log($panels);
 				// Get panel, link.
 					if (window.location.hash) {
-
 				 		$panel = $panels.filter(window.location.hash);
 						$link = $nav_links.filter('[href="' + window.location.hash + '"]');
 
@@ -70,11 +71,13 @@
 				// No panel/link? Default to first.
 					if (!$panel
 					||	$panel.length == 0) {
-
-						$panel = $panels.first();
+            $panel = $panels.first();
+          }
+          if (!$link && window.location.pathname == "/") {
 						$link = $nav_links.first();
-
 					}
+
+          console.log($link);
 
 				// Deactivate all panels except this one.
 					$panels.not($panel)
@@ -82,8 +85,7 @@
 						.hide();
 
 				// Activate link.
-					$link
-						.addClass('active');
+        if ($link) $link.addClass('active');
 
 				// Reset scroll.
 					$window.scrollTop(0);

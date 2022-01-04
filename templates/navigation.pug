@@ -1,0 +1,23 @@
+-
+  var navs = [
+    { href: "#home", icon: "fa-home", name: "Home"},
+    { href: "#projects", icon: "fa-cube", name: "Projects"},
+    { href: "#tools", icon: "fa-tools", name: "Tools"},
+    { href: "#about", icon: "fa-id-card", name: "About Us"},
+    { href: "#contact", icon: "fa-envelope", name: "Contact"}
+  ]
+
+mixin navigate(type)
+  nav#nav
+    if type
+      each nav in navs 
+        a(href=`${nav.href}` class=`${nav.icon}`).icon.solid: span= `${nav.name}`
+    else
+      each nav in navs 
+        a(href=`/${nav.href}` class=`${nav.icon}`).icon.solid: span= `${nav.name}`
+
+      //- a(href="#").icon.solid.fa-home: span Home
+      //- a(href="#projects").icon.solid.fa-cube: span Projects
+      //- a(href="#tools").icon.solid.fa-tools: span Tools
+      //- a(href="#about").icon.solid.fa-id-card: span About Us
+      //- a(href="#contact").icon.solid.fa-envelope: span Contact
