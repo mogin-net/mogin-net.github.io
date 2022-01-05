@@ -72,7 +72,7 @@
             $panel = $panels.first();
           }
           if (!$link && window.location.pathname == "/") {
-						$link = $nav_links.length >= 2 ? $nav_links.eq(2) : $nav_links.first();
+						$link = $nav_links.first();
 					}
 
 				// Deactivate all panels except this one.
@@ -109,7 +109,7 @@
 					else {
 
 						$panel = $panels.first();
-						$link = $nav_links.length >= 2 ? $nav_links.eq(2) : $nav_links.first();
+						$link = $nav_links.first();
 
 					}
 

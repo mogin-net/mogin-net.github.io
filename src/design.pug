@@ -1,9 +1,11 @@
 extends /layout.pug
+block title
+  - title = "Design"
 
 block content 
   article#design.panel
     header 
-      h2 Design
+      h2= `${title}`
     h3 Typography
     .elements
       h1 H1 Header

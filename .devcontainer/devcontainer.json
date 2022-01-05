@@ -21,6 +21,7 @@
   "extensions": [
     "ducfilan.pug-formatter",
     "pkief.material-icon-theme",
-    "ritwickdey.liveserver"
+    "ritwickdey.liveserver",
+    "jock.svg"
   ]
 }
