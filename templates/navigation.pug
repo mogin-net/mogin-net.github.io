@@ -1,23 +1,17 @@
 -
-  var navs = [
-    { href: "#projects", icon: "fa-cube", name: "Projects"},
-    { href: "#tools", icon: "fa-tools", name: "Tools"},
-    { href: "#home", icon: "fa-home", name: "Home"},
-    { href: "#about", icon: "fa-id-card", name: "About Us"},
-    { href: "#contact", icon: "fa-envelope", name: "Contact"}
-  ]
+  var navs = {
+    home: { href: "home", icon: "logo", order: 3, title: "Home"},
+    projects: { href: "projects", icon: "cube", order: 1, title: "Projects"},
+    tools: { href: "tools", icon: "layer", order: 2, title: "Tools"},
+    about: { href: "about", icon: "card", order: 4, title: "About Us"},
+    contact: { href: "contact", icon: "envelope", order: 5, title: "Contact"}
+  }
 
-mixin navigate(type)
-  nav#nav
-    if type
-      each nav in navs 
-        a(href=`${nav.href}` class=`${nav.icon}`).icon.solid: span= `${nav.name}`
-    else
-      each nav in navs 
-        a(href=`/${nav.href}` class=`${nav.icon}`).icon.solid: span= `${nav.name}`
-
-      //- a(href="#").icon.solid.fa-home: span Home
-      //- a(href="#projects").icon.solid.fa-cube: span Projects
-      //- a(href="#tools").icon.solid.fa-tools: span Tools
-      //- a(href="#about").icon.solid.fa-id-card: span About Us
-      //- a(href="#contact").icon.solid.fa-envelope: span Contact
+mixin navIcon(name)
+  case name 
+    when "card": include /icons/card.svg
+    when "cube": include /icons/cube.svg
+    when "envelope": include /icons/envelope.svg
+    when "layer": include /icons/layer.svg
+    when "logo": include /icons/logo.svg
+    default: include /icons/question.svg

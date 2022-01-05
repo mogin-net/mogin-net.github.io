@@ -270,7 +270,7 @@
 		&.default {
 			tbody {
 				tr {
-					border-bottom: solid 1px #f4f4f4;
+					border-bottom: solid 1px rgba(map-get($palette, "gray"), 0.15);
 				}
 			}
 
@@ -279,13 +279,14 @@
 			}
 
 			th {
+        color: map-get($palette, "primary");
 				text-align: left;
 				font-weight: 400;
 				padding: 0.5em 1em 0.5em 1em;
 			}
 
 			thead {
-				border-bottom: solid 2px #f4f4f4;
+				border-bottom: solid 1px map-get($palette, "secondary");
 			}
 		}
 	}
@@ -594,21 +595,35 @@
 
 	#nav {
 		text-align: center;
-		height: 4.25em;
+		height: 180px;
 		cursor: default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 		a {
 			position: relative;
-			display: inline-block;
+			display: flex;
 			color: map-get($palette, "background");
-			width: 1em;
-			height: 1em;
+			width: 40px;
+			height: 80px;
 			line-height: 0.9em;
 			font-size: 2.5em;
 			margin: 0 0.25em 0 0.25em;
 			opacity: 0.75;
 			outline: 0;
 			@include vendor('transition', 'opacity .25s ease-in-out');
+
+      &.logo {
+        width: 80px;
+        height: 80px;
+      }
+
+      .svg-icon {
+        .fill-color {
+          fill: white;
+        }
+      }
 
 			&.icon:before {
 				padding-right: 0;
@@ -623,8 +638,9 @@
 				display: block;
 				position: absolute;
 				left: 50%;
-				bottom: -0.75em;
+				bottom: -55px;
 				margin-left: -0.5em;
+        z-index: 100;
 				border-bottom: solid 0em map-get($palette, "background");
 				border-left: solid 0.5em transparent;
 				border-right: solid 0.5em transparent;
@@ -634,10 +650,11 @@
 			span {
 				display: block;
 				position: absolute;
-				background: map-get($palette, "primary");
+				background: map-get($palette, "gray");
 				color: map-get($palette, "background");
 				top: -2.75em;
 				font-size: 0.3em;
+        font-weight: bold;
 				height: 2.25em;
 				line-height: 2.25em;
 				left: 50%;
@@ -654,7 +671,7 @@
 					bottom: -0.4em;
 					left: 50%;
 					margin-left: -0.6em;
-					border-top: solid 0.6em map-get($palette, "primary");
+					border-top: solid 0.6em map-get($palette, "gray");
 					border-left: solid 0.6em transparent;
 					border-right: solid 0.6em transparent;
 				}
@@ -693,11 +710,11 @@
 		margin: 0 auto;
 		min-height: 100vh;
 		max-width: 100%;
-		padding: 4em 0 0 0;
+		padding: 0;
 		@include vendor('display', 'flex');
 		@include vendor('flex-direction', 'column');
 		@include vendor('align-items', 'center');
-		@include vendor('justify-content', 'center');
+		@include vendor('justify-content', 'flex-start');
 		@include vendor('transition', 'opacity 1s ease-in-out');
 
 		body.is-preload & {
@@ -705,22 +722,18 @@
 		}
 
 		@include breakpoint('<=large') {
-			padding: 3em 0 0 0;
 			max-width: calc(100% - 6em);
 		}
 
 		@include breakpoint('<=medium') {
-			padding: 1.5em 0 0 0;
 			max-width: calc(100% - 8em);
 		}
 
 		@include breakpoint('<=small') {
-			padding: 1em 0 0 0;
 			max-width: calc(100% - 2em);
 		}
 
 		@include breakpoint('<=xsmall') {
-			padding: 1em 0 0 0;
 			max-width: 100%;
 		}
 	}
@@ -862,7 +875,7 @@
 					height: auto;
 
 					.pic {
-						height: 25em;
+						height: 15em;
 						width: 100%;
             border-top: 3px solid map-get($palette, "secondary");
             border-left: 0;
@@ -908,17 +921,17 @@
 
     .profiles {
       .profile {
-        display: inline-flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: center;
+        @include vendor('display', 'inline-flex');
+        @include vendor('flex-direction', 'row');
+        @include vendor('flex-wrap', 'wrap');
+        @include vendor('justify-content', 'flex-start');
+        @include vendor('align-items', 'center');
         width: 100%;
         padding: 1em;
 
         &.right {
-          flex-direction: row-reverse;
-          justify-content: flex-start;
+          @include vendor('flex-direction', 'row-reverse');
+          @include vendor('justify-content', 'flex-start');
         }
 
         .image {
@@ -1120,6 +1133,12 @@
       &::after {
         content: "#{map-get($palette, "footer")}";
       }
+    }
+  }
+
+  svg {
+    .primary {
+      fill: map-get($palette, "secondary")
     }
   }
 
