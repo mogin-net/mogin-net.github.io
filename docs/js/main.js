@@ -65,7 +65,6 @@
 
 					}
 
-          console.log($panels);
 				// No panel/link? Default to first.
 					if (!$panel
 					||	$panel.length == 0) {
