@@ -1026,7 +1026,8 @@ body {
   background-repeat: repeat, no-repeat;
   background-size: auto, cover;
   background-attachment: fixed;
-  background-position: 0% 0%, center;
+  background-position: 0% 0%, center top;
+  background-color: #00416A;
   overflow-y: scroll;
 }
 body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -1044,17 +1045,17 @@ body, input, textarea, select {
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 300;
   color: #000000;
-  font-size: 20pt;
+  font-size: 15pt;
   line-height: 1.75em;
 }
 @media screen and (max-width: 1680px) {
   body, input, textarea, select {
-    font-size: 15pt;
+    font-size: 12pt;
   }
 }
 @media screen and (max-width: 1280px) {
   body, input, textarea, select {
-    font-size: 14pt;
+    font-size: 12pt;
   }
 }
 @media screen and (max-width: 736px) {
@@ -1064,7 +1065,7 @@ body, input, textarea, select {
 }
 @media screen and (max-width: 360px) {
   body, input, textarea, select {
-    font-size: 11pt;
+    font-size: 10pt;
   }
 }
 
@@ -1627,6 +1628,39 @@ body.is-preload #wrapper {
   -webkit-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
   -ms-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
   transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
+}
+#main .closeBtn {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  top: 10px;
+  right: 10px;
+  padding: 0px;
+  z-index: 10;
+  position: absolute;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#main .closeBtn:hover svg .fill-color {
+  fill: #00416A;
+}
+#main .closeBtn a {
+  width: 100%;
+  height: 100%;
+  margin: 25%;
+}
+#main .closeBtn a svg {
+  width: 100%;
+  height: 100%;
+}
+#main .closeBtn a svg .fill-color {
+  -moz-transition: -moz-fill 0.25s ease-in-out;
+  -webkit-transition: -webkit-fill 0.25s ease-in-out;
+  -ms-transition: -ms-fill 0.25s ease-in-out;
+  transition: fill 0.25s ease-in-out;
+  fill: #777777;
 }
 #main > .panel {
   -moz-transition: opacity 0.25s ease-in-out;

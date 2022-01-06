@@ -30,6 +30,10 @@ html(lang="en")
 
       // Main Content 
       #main
+        if title
+          .closeBtn
+            a(href="/")
+              +navIcon("times")
         block content
 
       // Footer 

@@ -28,6 +28,7 @@
         const year = new Date().getFullYear();
 				$body.removeClass('is-preload');
         $copyright.html(`&copy; 2021 - ${year}`)
+        $window.scrollTop(0);
 			}, 100);
 		});
 
@@ -122,6 +123,9 @@
 					$link.addClass('active');
 
 				// Set max/min height.
+          // $main
+          //   .css('max-height', '500px')
+          //   .css('overflow', 'hidden');
 					$main
 						.css('max-height', $main.height() + 'px')
 						.css('min-height', $main.height() + 'px');
@@ -136,6 +140,9 @@
 							$panel.show();
 
 						// Set new max/min height.
+              // $main
+              //   .css('max-height', '500px')
+              //   .css('overflow', 'hidden');
 							$main
 								.css('max-height', $panel.outerHeight() + 'px')
 								.css('min-height', $panel.outerHeight() + 'px');
@@ -150,6 +157,9 @@
 									$panel.removeClass('inactive');
 
 								// Clear max/min height.
+                // $main
+                //   .css('height', '500px')
+                //   .css('overflow', 'auto');
 									$main
 										.css('max-height', '')
 										.css('min-height', '');
