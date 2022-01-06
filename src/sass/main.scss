@@ -149,7 +149,8 @@
 		background-repeat: repeat, no-repeat;
 		background-size: auto, cover;
 		background-attachment: fixed;
-    background-position: 0% 0%, center;
+    background-position: 0% 0%, center top;
+    background-color: map-get($palette, "primary");
 		overflow-y: scroll;
 
 		// Stops initial animations until page loads.
@@ -166,15 +167,15 @@
 		font-family: 'Roboto', Arial, sans-serif;
 		font-weight: 300;
 		color: map-get($palette, "text");
-		font-size: 20pt;
+		font-size: 15pt;
 		line-height: 1.75em;
 
 		@include breakpoint('<=xlarge') {
-			font-size: 15pt;
+			font-size: 12pt;
 		}
 
 		@include breakpoint('<=large') {
-			font-size: 14pt;
+			font-size: 12pt;
 		}
 
 		@include breakpoint('<=small') {
@@ -182,7 +183,7 @@
 		}
 
 		@include breakpoint('<=xsmall') {
-			font-size: 11pt;
+			font-size: 10pt;
 		}
 	}
 
@@ -750,6 +751,45 @@
 			'min-height 0.5s ease-in-out',
 			'max-height 0.5s ease-in-out'
 		));
+
+    .closeBtn {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      top: 10px;
+      right: 10px;
+      padding: 0px;
+      z-index: 10;
+      position: absolute;
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        svg {
+          .fill-color {
+            fill: map-get($palette, "primary");
+          }
+        }
+      }
+
+      a {
+        width: 100%;
+        height: 100%;
+        margin: 25%;
+
+        svg {
+          width: 100%;
+          height: 100%;
+          
+          .fill-color {
+            @include vendor('transition', 'fill 0.25s ease-in-out');
+            fill: map-get($palette, "gray");
+          }
+        }
+      }
+    }
 
 		> .panel {
 			@include vendor('transition', 'opacity 0.25s ease-in-out');
