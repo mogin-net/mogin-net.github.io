@@ -1,4 +1,3 @@
-include /navigation.pug
 - var company = "PT. Mogin Technology Terpadu"
 
 doctype html
@@ -21,22 +20,8 @@ html(lang="en")
   body.is-preload
     // Wrapper 
     #wrapper
-      block navigation
-      if !hide
-        // Navigation 
-        nav#nav
-          each nav in navs
-            if nav.icon
-              a(href=`${title ? "/#" : "#"}${nav.href}` style=`order: ${nav.order};` class=`${nav.icon === "logo" ? "logo": ""}`).icon.solid
-                +navIcon(nav.icon)
-                span= `${nav.title}`
-
-      // Main Content
-      #main(class=`${main || ""}`)
-        if title
-          .closeBtn
-            a(href=`${returnPage ? `/${returnPage}` : "/"}`)
-              +navIcon("times")
+      // Main Content 
+      #main
         block content
 
       // Footer 

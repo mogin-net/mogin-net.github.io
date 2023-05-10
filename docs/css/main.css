@@ -1618,6 +1618,45 @@ body.is-preload #wrapper {
 }
 
 /* Main */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 980px) {
+  .grid {
+    display: block;
+    justify-content: flex-start;
+  }
+}
+.grid.keep {
+  display: flex;
+}
+.grid .cell {
+  flex: 1;
+  padding: 5px 10px 0 0;
+}
+.grid .cell.prio1 {
+  order: 1;
+}
+.grid .cell.prio2 {
+  order: 2;
+}
+@media screen and (max-width: 980px) {
+  .grid .cell.prio2 {
+    order: 0;
+  }
+}
+.grid .cell.c4of10 {
+  flex: 0 0 40%;
+}
+.grid .cell.c6of10 {
+  flex: 0 0 60%;
+}
+
 #main {
   position: relative;
   overflow: hidden;
@@ -1885,6 +1924,39 @@ body.is-preload #wrapper {
   overflow: hidden;
   margin: 0em 1em;
 }
+#main .profiles .profile .image a {
+  color: #00416A;
+  color: rgba(0, 65, 106, 0.65);
+}
+#main .profiles .profile .image a img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transform: scale(1, 1);
+  -moz-object-fit: cover;
+  -webkit-object-fit: cover;
+  -ms-object-fit: cover;
+  object-fit: cover;
+  -moz-object-position: center;
+  -webkit-object-position: center;
+  -ms-object-position: center;
+  object-position: center;
+  -moz-transition: -moz-transform .25s ease-in-out, opacity 0.25s ease-in-out;
+  -webkit-transition: -webkit-transform .25s ease-in-out, opacity 0.25s ease-in-out;
+  -ms-transition: -ms-transform .25s ease-in-out, opacity 0.25s ease-in-out;
+  transition: transform .25s ease-in-out, opacity 0.25s ease-in-out;
+}
+#main .profiles .profile .image a img:hover {
+  transform: scale(1.1, 1.1);
+  opacity: 0.9;
+}
+#main .profiles .profile .image a:hover {
+  color: #00416a;
+}
 #main .profiles .profile .image img {
   display: block;
   position: absolute;
@@ -1957,6 +2029,134 @@ body.is-preload #wrapper {
   }
   #main .profiles .profile ul li::before {
     content: "";
+  }
+}
+
+.biography {
+  margin-top: 4em;
+}
+.biography .panel {
+  padding: 0 !important;
+  height: calc(100vh - 8em);
+  overflow-y: scroll;
+}
+.biography .panel .logo {
+  position: absolute;
+  top: 350px;
+  right: 2em;
+  z-index: 3;
+  width: 100px;
+  height: 100px;
+}
+.biography .panel .profile-image {
+  height: 400px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 0em 0em;
+}
+.biography .panel .profile-image .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+.biography .panel .profile-image .mask .cover {
+  fill: #FFFFFF;
+}
+.biography .panel .profile-image .mask .wave {
+  fill: #FFB620;
+}
+.biography .panel .profile-image img {
+  position: relative;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -moz-object-fit: cover;
+  -webkit-object-fit: cover;
+  -ms-object-fit: cover;
+  object-fit: cover;
+  -moz-object-position: center;
+  -webkit-object-position: center;
+  -ms-object-position: center;
+  object-position: center;
+}
+.biography .panel .profile-description {
+  padding: 4em 2em 1em 2em;
+}
+.biography .panel .profile-description h1, .biography .panel .profile-description h2 {
+  padding-bottom: 0.5em;
+}
+.biography .panel .profile-description h2 {
+  color: #FFB620;
+}
+.biography .panel .profile-description h5 {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  text-align: right;
+  color: #FFB620;
+}
+@media screen and (max-width: 980px) {
+  .biography .panel .profile-description h5 {
+    text-align: left;
+  }
+}
+.biography .panel .profile-description h4 {
+  font-size: 1.2em;
+  font-weight: bolder;
+}
+.biography .panel .profile-description .company, .biography .panel .profile-description .time {
+  font-size: 1em;
+  line-height: 1.2em;
+  font-weight: bolder;
+  color: #777777;
+}
+.biography .panel .profile-description .time {
+  text-align: right;
+}
+.biography .panel .profile-description p {
+  font-size: 0.8em;
+  line-height: 1.2em;
+  margin-bottom: 0.4em;
+}
+.biography .panel .profile-description .curriculum {
+  margin: 2em 0em;
+}
+@media screen and (max-width: 1280px) {
+  .biography {
+    margin-top: 3em;
+  }
+  .biography .panel {
+    height: calc(100vh - 7em);
+  }
+}
+@media screen and (max-width: 980px) {
+  .biography {
+    margin-top: 2em;
+  }
+  .biography .panel {
+    height: calc(100vh - 6em);
+  }
+}
+@media screen and (max-width: 736px) {
+  .biography {
+    margin-top: 1em;
+  }
+  .biography .panel {
+    height: calc(100vh - 5em);
+  }
+}
+@media screen and (max-width: 360px) {
+  .biography {
+    margin-top: 0em;
+  }
+  .biography .panel {
+    height: calc(100vh - 4em);
   }
 }
 

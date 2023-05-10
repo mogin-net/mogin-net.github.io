@@ -1,3 +1,6 @@
 {
-  "svg.preview.background": "editor"
+  "svg.preview.background": "editor",
+  "liveServer.settings.root": "/docs",
+	"liveServer.settings.CustomBrowser": "chrome",
+  "liveServer.settings.port": 5500
 }

@@ -1,0 +1,37 @@
+.profile-image
+  .mask
+    svg(width="100%" height="400px" viewBox="0 0 500 500" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink")
+      path(d="M500,500L500,409.815C264.083,356.348 167.71,545.522 0,455.566L0,500L500,500Z").cover
+      path(d="M500,414.998L500,409.815C264.083,356.348 167.71,545.522 0,455.566L0,464.513C167.71,561.866 264.083,357.135 500,414.998Z").wave
+  img(src=`${profileImage}`)
+.logo
+  img(src=`/img/logo.svg`)
+.profile-description
+  h1 #{title}
+  h2 #{position}
+  .overview
+    if backgrounds && backgrounds.length
+      each background in backgrounds
+        p #{background}
+    if curriculum
+      .curriculum
+        each positions, head in curriculum 
+          .grid 
+            .cell
+              each position, index in positions
+                .grid
+                  if index === 0
+                    h5.cell.c4of10 #{head}
+                    h4.cell.c6of10 #{position.title}
+                  else
+                    h4.cell.c6of10 #{position.title}
+                if position.company
+                  .grid.keep
+                    p.cell.c6of10.company.prio2 #{position.company}
+                    if position.time 
+                      p.cell.c4of10.time.prio1 #{position.time}
+                .grid 
+                  if position.description && position.description.length
+                    each desc in position.description
+                      p.cell.c6of10 #{desc}
+

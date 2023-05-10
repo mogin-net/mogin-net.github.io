@@ -1,0 +1,72 @@
+extends /layout.pug
+
+block title
+  - returnPage = "#about"
+  - main = "biography"
+  - profileImage = "/img/nicolas.jpg"
+  - title = "Nicolas Trefzger"
+  - position = "General Manager"
+  - hide = true
+  - 
+    var backgrounds = []
+    var curriculum = {
+      "Previous Experience" : [
+        { 
+          title: "Full Stack Developer", 
+          company: "Capgemini Engineering, Munich", 
+          time: "Mar 2021 - Feb 2022", 
+          description: [
+            "Greenhouse automation for Bayer Crop Science US. System architecture and cloud integration."
+          ]
+        },
+        { 
+          title: "Application Manager", 
+          company: "Bucher Hydraulics, Erding", 
+          time: "Feb 2015 - Feb 2021", 
+          description: [
+            "Team lead for engineering software accross multiple sites. Process implementation for incoming goods and quality assurance."
+          ]
+        },
+        { 
+          title: "Consultant", 
+          company: "Altran, Munich", 
+          time: "Jan 2012 - Jan 2015", 
+          description: [
+            "Consultant for the “Virtual Product Integration” at BMW AG. Contact Person for the IT department to specify issues and feature requests. Rebuilding a new analysing tool with a PDM system. Defining interface requirements of other systems.",
+            "Digital MockUp analysis and concept work for BMW AG. Managing and coordinating of cross department meetings. Ensuring needs of assembly and service during changes. Presentation to project board for decision making on design changes. Preparation of audit documents"
+          ]
+        },
+        { 
+          title: "Co-Founder, Munich", 
+          company: "mobilePDM", 
+          time: "Oct 2010 - Nov 2013", 
+          description: [
+            "Entrepreneur for SolidWorks Partner Products. Mobile access to SolidWorks Enterprise PDM. PDM Consulting and 3rd party system integration."
+          ]
+        },
+        { 
+          title: "Developer, Aachen", 
+          company: "Aspera GmbH", 
+          time: "Nov  2007 - Jul 2011", 
+          description: [
+            "Agile software development and unit testing."
+          ]
+        }
+      ],
+      "Education" : [
+        { 
+          title: "MBA & Eng., Engineering Management", 
+          company: "Munich University of Applied Sciences", 
+          time: ""
+        },
+        { 
+          title: "B.Eng., Mechanical Engineering", 
+          company: "Aachen University of Applied Sciences", 
+          time: ""
+        }
+      ]
+    }
+
+block content
+  article(id=`nicolas-trefzger`).panel
+    include /profile.pug

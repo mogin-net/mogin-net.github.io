@@ -1,0 +1,46 @@
+extends /layout.pug
+
+block title
+  - returnPage = "#about"
+  - main = "biography"
+  - profileImage = "/img/christina.jpg"
+  - title = "Christina Hann-Trefzger"
+  - position = "Director of Sales"
+  - hide = true
+  - 
+    var backgrounds = []
+    var curriculum = {
+      "Previous Experience" : [
+        { 
+          title: "Sales Assistant", 
+          company: "Richard Mille, Munich", 
+          time: "Mar 2021 - Feb 2022"
+        },
+        { 
+          title: "Sales Assistant", 
+          company: "Bucherer Rolex | Patek Philippe Boutique, Munich", 
+          time: "Mar 2021 - Feb 2022"
+        },
+        { 
+          title: "Sales Assistant", 
+          company: "Prada, Munich", 
+          time: "Mar 2021 - Feb 2022"
+        }
+      ],
+      "Education" : [
+        { 
+          title: "B.A., Fashion Design", 
+          company: "Shih Chien University, Taipei", 
+          time: ""
+        },
+        { 
+          title: "Chinese language certificate", 
+          company: "Tamkang University, Taipei", 
+          time: ""
+        }
+      ]
+    }
+
+block content
+  article(id=`christina-hann`).panel
+    include /profile.pug
