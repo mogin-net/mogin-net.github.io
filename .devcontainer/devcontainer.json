@@ -1,5 +1,5 @@
 {
-  "name": "Homepage",
+  "name": "Mogin Group",
   "dockerComposeFile": "docker-compose.yml",
   "service": "web",
   "workspaceFolder": "/workspace",
@@ -16,7 +16,8 @@
       "docs": "views"
     },
     "liveServer.settings.root": "/docs",
-    "liveServer.settings.CustomBrowser": "chrome"
+    "liveServer.settings.CustomBrowser": "chrome",
+    "liveServer.settings.port": 5502
   },
   "extensions": [
     "ducfilan.pug-formatter",
