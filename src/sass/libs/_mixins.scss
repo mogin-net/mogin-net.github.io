@@ -1,4 +1,4 @@
-@mixin get-font-color($background) {
+@mixin get-contrast-color($background) {
   $r: red($background);
   $g: green($background);
   $b: blue($background);

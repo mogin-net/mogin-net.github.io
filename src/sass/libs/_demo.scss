@@ -1,0 +1,288 @@
+.demo-colors {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .color {
+    display: inline-flex;
+    align-content: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    border: 3px solid white;
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    margin-right: 1em;
+    margin-bottom: 2.5em;
+    padding: 30px 0;
+    font-size: 14px;
+    line-height: normal;
+    position: relative;
+    font-weight: bold;
+    div {
+      position: absolute;
+      color: white;
+      top: 85px;
+    }
+  }
+
+  .bg {
+    &::after {
+      content: "#{map-get($palette, "bg")}";
+    }
+  }
+  .bg-transparent {
+    &::after {
+      content: "#{map-get($palette, "bg-transparent")}";
+    }
+  }
+  .fg-bold {
+    &::after {
+      content: "#{map-get($palette, "fg-bold")}";
+    }
+  }
+  .fg {
+    &::after {
+      content: "#{map-get($palette, "fg")}";
+    }
+  }
+  .fg-light {
+    &::after {
+      content: "#{map-get($palette, "fg-light")}";
+    }
+  }
+  .fg-lighter {
+    &::after {
+      content: "#{map-get($palette, "fg-lighter")}";
+    }
+  }
+  .border {
+    &::after {
+      content: "#{map-get($palette, "border")}";
+    }
+  }
+  .border-bg {
+    &::after {
+      content: "#{map-get($palette, "border-bg")}";
+    }
+  }
+  .border2 {
+    &::after {
+      content: "#{map-get($palette, "border2")}";
+    }
+  }
+  .border2-bg {
+    &::after {
+      content: "#{map-get($palette, "border2-bg")}";
+    }
+  }
+  .primary {
+    &::after {
+      content: "#{map-get($palette, "primary")}";
+    }
+  }
+  .accent {
+    &::after {
+      content: "#{map-get($palette, "accent")}";
+    }
+  }
+  .accent-transparent {
+    &::after {
+      content: "#{map-get($palette, "accent-transparent")}";
+    }
+  }
+  .travel {
+    &::after {
+      content: "#{map-get($palette, "travel")}";
+    }
+  }
+  .rental {
+    &::after {
+      content: "#{map-get($palette, "rental")}";
+    }
+  }
+  .technology {
+    &::after {
+      content: "#{map-get($palette, "technology")}";
+    }
+  }
+}
+
+.bg {
+  &.bg-color {
+    background-color: map-get($palette, "bg");
+  }
+  &.txt-color {
+    color: map-get($palette, "bg");
+  }
+  &.txt-contrast {
+    @include get-contrast-color(map-get($palette, "bg"));
+  }
+}
+.bg-transparent {
+  &.bg-color {
+    background-color: map-get($palette, "bg-transparent");
+  }
+  &.txt-color {
+    color: map-get($palette, "bg-transparent");
+  }
+  &.txt-contrast {
+    @include get-contrast-color(map-get($palette, "bg-transparent"));
+  }
+}
+.fg-bold {
+  &.bg-color {
+    background-color: map-get($palette, "fg-bold");
+  }
+  &.txt-color {
+    color: map-get($palette, "fg-bold");
+  }
+  &.txt-contrast {
+    @include get-contrast-color(map-get($palette, "fg-bold"));
+  }
+}
+.fg {
+  &.bg-color {
+    background-color: map-get($palette, "fg");
+  }
+  &.txt-color {
+    color: map-get($palette, "fg");
+  }
+  &.txt-contrast {
+    @include get-contrast-color(map-get($palette, "fg"));
+  }
+}
+.fg-light {
+  &.bg-color {
+    background-color: map-get($palette, "fg-light");
+  }
+  &.txt-color {
+    color: map-get($palette, "fg-light");
+  }
+  &.txt-contrast {
+    @include get-contrast-color(map-get($palette, "fg-light"));
+  }
+}
+.fg-lighter {
+  &.bg-color {
+    background-color: map-get($palette, "fg-lighter");
+  }
+  &.txt-color {
+    color: map-get($palette, "fg-lighter");
+  }
+  &.txt-contrast {
+    @include get-contrast-color(map-get($palette, "fg-lighter"));
+  }
+}
+.border {
+  &.bg-color {
+    background-color: map-get($palette, "border");
+  }
+  &.txt-color {
+    color: map-get($palette, "border");
+  }
+  &.txt-contrast {
+    @include get-contrast-color(map-get($palette, "border"));
+  }
+}
+.border-bg {
+  &.bg-color {
+    background-color: map-get($palette, "border-bg");
+  }
+  &.txt-color {
+    color: map-get($palette, "border-bg");
+  }
+  &.txt-contrast {
+    @include get-contrast-color(map-get($palette, "border-bg"));
+  }
+}
+.border2 {
+  &.bg-color {
+    background-color: map-get($palette, "border2");
+  }
+  &.txt-color {
+    color: map-get($palette, "border2");
+  }
+  &.txt-contrast {
+    @include get-contrast-color(map-get($palette, "border2"));
+  }
+}
+.border2-bg {
+  &.bg-color {
+    background-color: map-get($palette, "border2-bg");
+  }
+  &.txt-color {
+    color: map-get($palette, "border2-bg");
+  }
+  &.txt-contrast {
+    @include get-contrast-color(map-get($palette, "border2-bg"));
+  }
+}
+.primary {
+  &.bg-color {
+    background-color: map-get($palette, "primary");
+  }
+  &.txt-color {
+    color: map-get($palette, "primary");
+  }
+  &.txt-contrast {
+    @include get-contrast-color(map-get($palette, "primary"));
+  }
+}
+.accent {
+  &.bg-color {
+    background-color: map-get($palette, "accent");
+  }
+  &.txt-color {
+    color: map-get($palette, "accent");
+  }
+  &.txt-contrast {
+    @include get-contrast-color(map-get($palette, "accent"));
+  }
+}
+.accent-transparent {
+  &.bg-color {
+    background-color: map-get($palette, "accent-transparent");
+  }
+  &.txt-color {
+    color: map-get($palette, "accent-transparent");
+  }
+  &.txt-contrast {
+    @include get-contrast-color(map-get($palette, "accent-transparent"));
+  }
+}
+.travel {
+  &.bg-color {
+    background-color: map-get($palette, "travel");
+  }
+  &.txt-color {
+    color: map-get($palette, "travel");
+  }
+  &.txt-contrast {
+    @include get-contrast-color(map-get($palette, "travel"));
+  }
+}
+.rental {
+  &.bg-color {
+    background-color: map-get($palette, "rental");
+  }
+  &.txt-color {
+    color: map-get($palette, "rental");
+  }
+  &.txt-contrast {
+    @include get-contrast-color(map-get($palette, "rental"));
+  }
+}
+.technology {
+  &.bg-color {
+    background-color: map-get($palette, "technology");
+  }
+  &.txt-color {
+    color: map-get($palette, "technology");
+  }
+  &.txt-contrast {
+    @include get-contrast-color(map-get($palette, "technology"));
+  }
+}
+  

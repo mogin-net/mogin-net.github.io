@@ -6,71 +6,17 @@
 @import 'libs/html-grid';
 
 /*
-	Astral by HTML5 UP
+	Landed by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Wrapper */
+/* Loader */
 
-	#wrapper {
-		opacity: 1 !important;
-	}
+body.landing.is-preload:before {
+  display: none;
+}
 
-/* Nav */
-
-	#nav {
-    // width: 100%;
-    // background-color: #FFFFFF;
-    // margin-bottom: 2em;
-    // height: 2em;
-
-		a {
-			opacity: 1.0;
-      margin: 0 0.15em 0 0.15em;
-			&:before,
-			&:after {
-				display: none;
-			}
-
-      &:hover {
-        span {
-          display: block;
-        }
-      }
-      
-      &.logo {
-        span {
-          display: none;
-        }
-      }
-
-			span {
-				top: 80px;
-				opacity: 1.0;
-        width: 80px;
-        display: none;
-
-				&:after {
-					display: none;
-				}
-			}
-		}
-	}
-
-  
-/* Main */
-
-	#main {
-		background: none;
-		box-shadow: none;
-
-		> .panel {
-			background: map-get($palette, "background");
-			margin-bottom: 2em;
-
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-	}
+body.landing.is-preload:after {
+  display: none;
+}
