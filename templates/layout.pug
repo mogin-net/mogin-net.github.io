@@ -1,5 +1,4 @@
-include /navigation.pug
-- var company = "PT. Mogin Technology Terpadu"
+- var company = "Mogin Group"
 
 doctype html
 html(lang="en")
@@ -12,32 +11,53 @@ html(lang="en")
     meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")/
     meta(property="og:url" content="https://mogin.net")/
     meta(property="og:title" content=`${headerTitle}`)/
-    meta(property="og:description" content="Enterprise Application Development, IT Consulting, Engineering")/
+    meta(property="og:description" content="Inspiring Innovation, Extraordinary Journeys. Mogin Group, Your Path to Success!")/
     meta(property="og:image" content="https://mogin.net/img/mogin_300_300.jpg")/
     meta(property="og:type" content="website")/
     meta(property="og:locale" content="en_US")/
     link(rel="stylesheet" href="/css/main.css")/
     noscript: link(rel="stylesheet" href="/css/noscript.css")/
-  body.is-preload
+  body.is-preload(class=title ? "" : "landing")
     // Wrapper 
-    #wrapper
+    #page-wrapper
       // Navigation 
-      nav#nav
-        each nav in navs 
-          a(href=`${title ? "/#" : "#"}${nav.href}` style=`order: ${nav.order};` class=`${nav.icon === "logo" ? "logo": ""}`).icon.solid
-            +navIcon(nav.icon)
-            span= `${nav.title}`
+      header#header
+        h1#logo 
+          a(href="/") Mogin Group
+        nav#nav
+          ul 
+            li
+              a(href=title ? "/#travel" : "#travel") Travel 
+            li 
+              a(href=title ? "/#rental" : "#rental") Rental
+            li 
+              a(href=title ? "/#technology" : "#technology") Technology 
 
       // Main Content 
       #main
-        if title
-          .closeBtn
-            a(href="/")
-              +navIcon("times")
         block content
 
       // Footer 
       #footer
+        //- ul.icons
+        //-   li
+        //-     a.icon.brands.alt.fa-twitter(href="#")
+        //-       span.label Twitter
+        //-   li
+        //-     a.icon.brands.alt.fa-facebook-f(href="#")
+        //-       span.label Facebook
+        //-   li
+        //-     a.icon.brands.alt.fa-linkedin-in(href="#")
+        //-       span.label LinkedIn
+        //-   li
+        //-     a.icon.brands.alt.fa-instagram(href="#")
+        //-       span.label Instagram
+        //-   li
+        //-     a.icon.brands.alt.fa-github(href="#")
+        //-       span.label GitHub
+        //-   li
+        //-     a.icon.solid.alt.envelope(href="#")
+        //-       span.label Email
         ul.copyright 
           li#copyright &copy; 2021 - #{new Date().getFullYear()}
           li= `${company}`

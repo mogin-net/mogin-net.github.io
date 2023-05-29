@@ -1,0 +1,7 @@
+.cryptedmail:after {
+  content: attr(data-a) "@" attr(data-b) "." attr(data-c); 
+}
+
+.imgmail {
+  display: none;
+}
