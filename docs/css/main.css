@@ -76,6 +76,9 @@
 .demo-colors .technology::after {
   content: "#00416A";
 }
+.demo-colors .fashion::after {
+  content: "#af6e96";
+}
 
 .bg.bg-color {
   background-color: #1c1d26;
@@ -235,6 +238,16 @@
 }
 .technology.txt-contrast {
   color: #FFFFFF;
+}
+
+.fashion.bg-color {
+  background-color: #af6e96;
+}
+.fashion.txt-color {
+  color: #af6e96;
+}
+.fashion.txt-contrast {
+  color: #000000;
 }
 
 .cryptedmail:after {
@@ -2834,6 +2847,13 @@ input[type=button]:disabled,
 .spotlight.technology .button:hover, .spotlight.technology .button:active {
   color: #00416A !important;
   box-shadow: inset 0 0 0 1px #00416A;
+}
+.spotlight.fashion .content {
+  border-color: #af6e96;
+}
+.spotlight.fashion .button:hover, .spotlight.fashion .button:active {
+  color: #af6e96 !important;
+  box-shadow: inset 0 0 0 1px #af6e96;
 }
 .spotlight.rental .content {
   border-color: #33cdcd;

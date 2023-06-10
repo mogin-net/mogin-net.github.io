@@ -1265,6 +1265,18 @@ input[type="button"],
     }
   }
 
+  &.fashion {
+    .content {
+      border-color: _palette(fashion);
+    }
+    .button {
+      &:hover, &:active { 
+        color: _palette(fashion) !important;
+        box-shadow: inset 0 0 0 1px _palette(fashion);
+      }
+    }
+  }
+
   &.rental {
     .content {
       border-color: _palette(rental);

@@ -107,6 +107,11 @@
       content: "#{map-get($palette, "technology")}";
     }
   }
+  .fashion {
+    &::after {
+      content: "#{map-get($palette, "fashion")}";
+    }
+  }
 }
 
 .bg {
@@ -283,6 +288,17 @@
   }
   &.txt-contrast {
     @include get-contrast-color(map-get($palette, "technology"));
+  }
+}
+.fashion {
+  &.bg-color {
+    background-color: map-get($palette, "fashion");
+  }
+  &.txt-color {
+    color: map-get($palette, "fashion");
+  }
+  &.txt-contrast {
+    @include get-contrast-color(map-get($palette, "fashion"));
   }
 }
   
